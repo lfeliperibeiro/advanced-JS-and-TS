@@ -1,4 +1,4 @@
-function CreateCalculator(){
+function Calculator(){
     this.displayValue = document.querySelector('.display'),
 
     this.init = () => {
@@ -44,7 +44,7 @@ function CreateCalculator(){
       document.addEventListener('click', (event) => {
         const target = event.target;
         if(target.classList.contains('btn-num')){
-          this.buttonStopDigit(target.innerText);
+          this.addDisplay(target.innerText);
         }
 
         if(target.classList.contains('btn-clear')){
@@ -60,11 +60,11 @@ function CreateCalculator(){
         }
       });
     };
-    this.buttonStopDigit= (value) => {
+    this.addDisplay= (value) => {
       this.displayValue.value += value;
     }
   }
 
 
-const calculator = new CreateCalculator();
+const calculator = new Calculator();
 calculator.init();
