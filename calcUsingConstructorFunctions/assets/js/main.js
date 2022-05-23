@@ -62,6 +62,7 @@ function Calculator(){
     };
     this.addDisplay= (value) => {
       this.displayValue.value += value;
+      this.displayValue.focus();
     }
   }
 
